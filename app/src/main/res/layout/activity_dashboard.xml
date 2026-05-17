@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etNim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIM"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:inputType="textPersonName"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/etProdi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Program Studi"
+            android:inputType="text"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/etKelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kelas"
+            android:inputType="text"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/etAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat"
+            android:inputType="textPostalAddress"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-Mail"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnTambah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Data"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Terinput:"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Since we are in a ScrollView, we need to handle ListView's height or use a different approach.
+             For simplicity in this UTS, I'll use a LinearLayout to dynamically add views if ListView causes issues,
+             OR I'll give ListView a fixed height. A better way is to put the ListView OUTSIDE the ScrollView
+             but the form needs to scroll too. Actually, I can put the form in the Header of ListView.
+             But for a simple UTS, I'll use a fixed height for ListView or just a LinearLayout. -->
+        
+        <ListView
+            android:id="@+id/listViewData"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_red_light"/>
+
+    </LinearLayout>
+</ScrollView>
