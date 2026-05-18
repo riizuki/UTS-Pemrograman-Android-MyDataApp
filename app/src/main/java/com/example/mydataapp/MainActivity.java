@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         
-        // Check if already logged in
         if (sharedPreferences.getBoolean("isLoggedIn", false)) {
             navigateToDashboard();
             return;

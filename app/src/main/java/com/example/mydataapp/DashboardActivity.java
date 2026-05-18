@@ -67,7 +67,6 @@ public class DashboardActivity extends AppCompatActivity {
                     dataList.add(combinedData);
                     adapter.notifyDataSetChanged();
                     
-                    // Clear inputs
                     etNim.setText("");
                     etNama.setText("");
                     etProdi.setText("");
@@ -84,7 +83,7 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.clear(); // Clear all data (isLoggedIn and username)
+                editor.clear();
                 editor.apply();
 
                 Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
